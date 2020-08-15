@@ -1,0 +1,209 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content=" SIVA.  Bandas en vivo - Streaming - Espacio Multicultural - Calidad profesional de sonido - Mastering" />
+<title>SIVA</title>
+<link rel="stylesheet" href="dist/siva.css" />
+<link href="../../../css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/custom.css" rel="stylesheet">
+<link href="../../../css/animate.css" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="../../../css/bootstrap-image-gallery.min.css">
+<link rel="icon" href="../../../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+<script src='https://meet.jit.si/external_api.js'></script>
+<style media="screen">
+
+</style>
+</head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"style="background:#333">
+    <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+             // Controls (as seen below) works in such a way that as soon as you explicitly define (add) one control
+             // to the settings, ALL default controls are removed and you have to add them back in by defining those below.
+             // For example, let's say you just simply wanted to add 'restart' to the control bar in addition to the default.
+             // Once you specify *just* the 'restart' property below, ALL of the controls (progress bar, play, speed, etc) will be removed,
+             // meaning that you MUST specify 'play', 'progress', 'speed' and the other default controls to see them again.
+             const controls = [
+                 'play-large' // The large play button in the center
+
+             ];
+             const player = Plyr.setup('.js-player', { controls });
+         });
+     </script>
+
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display navbar-fixed-top-->
+                    <div class="navbar-header  page-scroll">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="logomin">
+                            <a href="#home" class="page-scroll"><img src="../../../img/sivalogo.png" alt="La Gran T" /></a>
+                        </div>
+                        <div class="collapse navbar-collapse animated fadeInRight" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a class="page-scroll" href="#equipamientos">¿Que es SIVA?<br/>_</a></li>
+                                <li><a class="page-scroll" href="#actualidad">Instructivo para utilizar SIVA<br/>_</a></li>
+                                <li><a class="page-scroll" href="#quienes-somos">Soporte<br/>_</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+        <section id="home" class="intro-section">
+            <div class="container-fluid">
+                <div class="logolgt animated fadeInLeft">
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <img src="../../../img/sivalogo.png" width="200px" height="95px"/>
+                    </a>
+
+                </div>
+
+
+
+
+
+
+<script type="text/javascript">
+  function disableButton(start){
+    document.getElementById(start.id).disabled = true;
+    alert("Estas Saliendo en vivo!");
+  }
+</script>
+<br>
+
+  <br>
+<!-- <button id="start" type="button" class="btn btn-primary btn-block btn-lg">¡PARTICIPA CON NOSOTROS!</button> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="js-player" data-plyr-provider="youtube" data-plyr-embed-id="2COVJCcUwwU"></div>
+<!--
+<div class="plyr__video-embed" id="player">
+  <iframe width="30%" height="20%" src="https://www.youtube-nocookie.com/embed/dwPBssudyEg?autoplay=1&amp;showinfo=1&amp;autohide=1&amp;mute=1&amp;playlist=h4gr8eH7D&amp;loop=1&modestbranding=1&" frameborder="1"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div> -->
+<!-- <div class="video-container" >
+  <div class="video-foreground">
+ <iframe width="70%" height="50%" src="https://www.youtube-nocookie.com/embed/dwPBssudyEg?autoplay=1&amp;showinfo=1&amp;autohide=1&amp;mute=1&amp;playlist=h4gr8eH7D&amp;loop=1&modestbranding=1&" frameborder="1"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  </div> -->
+ <div id="jitsi-container">
+ </div>
+ <br>
+
+ <div class="container">
+   <div class="row">
+     <div class="hacetever">
+<input class="btn btn-primary btn-block btn-lg" type="button" id="start" value="Hacete ver, hacete escuchar!" onclick="disableButton(this)">
+     </div>
+
+   </div>
+
+ </div>
+
+
+
+
+
+ <script>
+
+ var button = document.querySelector('#start');
+ var container = document.querySelector('#jitsi-container');
+ var api = null;
+
+
+ button.addEventListener('click', () => {
+     var domain = "meet.jit.si";
+     var options = {
+       configOverwrite: { startSilent: true, startWithAudioMuted: false, subject: 'SIVA',
+     prejoinPageEnabled: false },
+       interfaceConfigOverwrite: {
+    filmStripOnly: false,
+    VERTICAL_FILMSTRIP: false,
+    DISABLE_JOIN_LEAVE_NOTIFICATIONS:true,
+    DISABLE_FOCUS_INDICATOR: true,
+    VIDEO_LAYOUT_FIT: true,
+    MOBILE_APP_PROMO: true,
+      SHOW_CHROME_EXTENSION_BANNER: false,
+      TOOLBAR_BUTTONS: [
+        'hangup',
+        'raisehand'
+      ],
+},
+         "roomName": "serddghcghkmgvjoik0001",
+         "parentNode": container,
+         "width": 500,
+         "height": 150,
+     };
+
+
+     api = new JitsiMeetExternalAPI(domain, options);
+ });
+
+ </script>
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="../../../js/bootstrap.min.js"></script>
+ <script src="../../../js/jquery.easing.min.js"></script>
+ <script src="../../../js/scrolling-nav.js"></script>
+ <script src="../../../js/custom.js"></script>
+ <script src="../../../js/wow.min.js"></script>
+ <script src="../../../js/jquery.blueimp-gallery.min.js"></script>
+ <script src="../../../js/bootstrap-image-gallery.min.js"></script>
+ <script src="dist/siva.js" crossorigin="anonymous"></script>
+
+ <script type='text/javascript'>
+ 	document.oncontextmenu = function(){return false}
+ </script>
+
+ <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+<script>
+          document.addEventListener('DOMContentLoaded', () => {
+          // Controls (as seen below) works in such a way that as soon as you explicitly define (add) one control
+          // to the settings, ALL default controls are removed and you have to add them back in by defining those below.
+          // For example, let's say you just simply wanted to add 'restart' to the control bar in addition to the default.
+          // Once you specify *just* the 'restart' property below, ALL of the controls (progress bar, play, speed, etc) will be removed,
+          // meaning that you MUST specify 'play', 'progress', 'speed' and the other default controls to see them again.
+             const controls = [
+              'play-large', // The large play button in the center
+              'restart', // Restart playback
+              'rewind', // Rewind by the seek time (default 10 seconds)
+              'play', // Play/pause playback
+              'fast-forward', // Fast forward by the seek time (default 10 seconds)
+              'progress', // The progress bar and scrubber for playback and buffering
+              'current-time', // The current time of playback
+              'duration', // The full duration of the media
+              'mute', // Toggle mute
+              'volume', // Volume control
+              'captions', // Toggle captions
+              'settings', // Settings menu
+              'pip', // Picture-in-picture (currently Safari only)
+              'airplay', // Airplay (currently Safari only)
+              'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
+              'fullscreen' // Toggle fullscreen
+          ];
+          const player = Plyr.setup('player', { controls });
+      });
+  </script>
+
+</body>
+</html>
